@@ -3,9 +3,10 @@
 ## Table of Contents
 1. Description
 2. How to set up database?
-3. Technologies used
-4. The author
-5. Credits
+3. API endpoints
+4. Technologies used
+5. The author
+6. Credits
 
 ---
 
@@ -40,7 +41,35 @@ Install npm packages by running the command `npm install`
 11. Once set, you can run the final server using `node .` in the dist folder.
 
 
+## API Endpoints
 
+#### Products
+- Index
+    - **Get** 127.0.0.1:8000/products
+- Show (args: product id)
+    - **Get** 127.0.0.1:8000/products/:id
+- Create (args: Product)[token required]
+    - **Post** 127.0.0.1:8000/products
+- Top 5 most popular products
+    - **Get** 127.0.0.1:8000/products/top/5
+
+#### Users
+- Index [token required]
+    - **Get** 127.0.0.1:8000/users
+- Show (args: id)[token required]
+    - **Get** 127.0.0.1:8000/users/:id
+- Create (args: User)[token required]
+    - **Post** 127.0.0.1:8000/users
+
+#### Orders
+- Adding product to an order
+    - **Post** 127.0.0.1:8000/orders/:order_id/products
+- Current Order by user (args: user id)[token required]
+    - **Get** 127.0.0.1:8000/orders/active/:user_id
+- Completed Orders by user (args: user id)[token required]
+    - **Get** 127.0.0.1:8000/orders/completed/:user_id
+
+    
 ## Technologies used
 
 - TypeScript
