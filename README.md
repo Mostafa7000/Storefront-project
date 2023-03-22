@@ -56,7 +56,7 @@ Install npm packages by running the command `npm install`
 ## The author
 
 **Name:** Mostafa Tarek
-**Specialization:** Computer Science, 3^rd^ year
+**Specialization:** Computer Science, 3rd year
 **Organization:** Cairo University
 
 ## Credits
